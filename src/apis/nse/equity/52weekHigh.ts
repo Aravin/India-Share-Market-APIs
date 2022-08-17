@@ -1,14 +1,11 @@
 import express from 'express';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { config } from '../../../config';
 import { constants } from '../../../constants';
 
-export const indicesInfo = async (req: express.Request, res: express.Response) => {
-    if (!req.query.index) {
-        res.status(400).send('Index is missing');
-    }
+export const _52weekHigh = async (req: express.Request, res: express.Response) => {
 
-    const path = `${config.nse.baseURL}${constants.api.indices.info}${(req.query.index as string).toUpperCase()}`;
+    const path = `${config.nse.baseURL}${constants.api.equity._52weekHigh}`;
 
     try {
         const response = await axios.get(path);

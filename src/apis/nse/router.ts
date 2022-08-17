@@ -4,6 +4,8 @@ import { quote } from './equity/quote';
 import { trade } from './equity/trade';
 import { allIndices } from './indices/all';
 import { indicesInfo } from './indices/info';
+import { _52weekLow } from './equity/52weekLow';
+import { _52weekHigh } from './equity/52weekHigh';
 export const router = express.Router();
 
 // middleware that is specific to this router
@@ -23,6 +25,14 @@ router.get('/eq/quote', (req, res) => {
 
 router.get('/eq/trade', (req, res) => {
     trade(req, res);
+});
+
+router.get('/eq/52-week-low', (req, res) => {
+    _52weekLow(req, res);
+});
+
+router.get('/eq/52-week-high', (req, res) => {
+    _52weekHigh(req, res);
 });
 
 // INDEX
