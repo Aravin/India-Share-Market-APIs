@@ -1,5 +1,29 @@
 # India Share Market Data API
 
+## Steps to run this application locally
+
+- Clone / download the source to your local system.
+
+- Open `cmd` (command prompt or bash) and navigate to the cloned/downloaded path.
+
+- Install the required dependency, run following command
+
+```bash
+npm install
+```
+
+- Then compile the TypeScript into JavaScript
+
+```bash
+tsc
+```
+
+- Start the service
+
+```bash
+npm run start
+```
+
 ## NSE APIs
 
 ## Equity
