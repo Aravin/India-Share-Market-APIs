@@ -2,11 +2,9 @@
 
 ## NSE APIs
 
----
-
 ## Equity
 
-### Get Stock Quote
+### Get Market Status
 
 ```curl
 http://localhost:3000/nse/status
@@ -35,8 +33,6 @@ http://localhost:3000/nse/eq/52-week-high
 ```curl
 http://localhost:3000/nse/eq/52-week-low
 ```
-
----
 
 ### Indices
 
