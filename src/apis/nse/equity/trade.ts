@@ -1,0 +1,21 @@
+import express from 'express';
+import axios from 'axios';
+import { config } from '../../../config';
+import { constants } from '../../../constants';
+
+export const trade = async (req: express.Request, res: express.Response) => {
+    if (!req.query.symbol) {
+        res.status(400).send('Symbol is missing');
+    }
+
+    const path = `${config.nse.baseURL}${constants.api.equity.quote}${req.query.symbol}&section=trade_info`;
+
+    try {
+        const response = await axios.get(path);
+
+        return res.send(response.data);
+    }
+    catch (err: unknown) {
+        return res.status(500).send((err as Error).message);
+    }
+};
