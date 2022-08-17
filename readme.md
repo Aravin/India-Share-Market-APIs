@@ -13,7 +13,7 @@ http://localhost:3000/nse/status
 ### Get Stock Quote
 
 ```curl
-### http://localhost:3000/nse/eq/quote?symbol=HDFCBANK
+http://localhost:3000/nse/eq/quote?symbol=HDFCBANK
 ```
 
 ### Get Stock Trades
